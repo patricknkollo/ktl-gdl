@@ -25,12 +25,12 @@ class PersonController (@Autowired private val  service: PersonService) {
         return service.getUserById(userId)
     }
 
-    @GetMapping("/update/{id}")
+    @GetMapping("/update/user/{id}")
     fun updateUserById(@PathVariable("id") userId: Long, person: Person): ResponseEntity<Person> {
         return service.updatePerson(userId, person)
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/delete/user/{id}")
     fun deleteUserById(@PathVariable("id") userId: Long) {
          service.deletePersonById(userId)
     }

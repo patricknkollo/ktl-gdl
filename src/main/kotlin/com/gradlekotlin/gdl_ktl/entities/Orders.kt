@@ -9,19 +9,14 @@ import lombok.Data
 import lombok.NoArgsConstructor
 
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
-class Person (
+@Data
+class Orders(
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var personid: Long,
-    var vorname: String,
-    var name: String,
-    var email: String,
-    var straße: String,
-    var streetnr: Int,
-    var plz: String,
-    var stadt: String
-
-    )
+     var orderid: Long,
+     var personid: Long,
+     //var articles: List<Article>
+)
