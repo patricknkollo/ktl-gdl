@@ -13,7 +13,7 @@ class KontoController (@Autowired private val  service: KontoService){
 
     @GetMapping("/kontos")
     @ResponseBody
-    fun getAllUsers(): List<Konto> =
+    fun getAllKontos(): List<Konto> =
         service.getAllTheKontoFromTheDatabase().toList()
 
     @PostMapping("/save/konto")

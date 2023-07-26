@@ -14,7 +14,7 @@ class ArticleController (@Autowired private val  service: ArticleService) {
 
     @GetMapping("/all")
     @ResponseBody
-    fun getAllUsers(): List<Article> =
+    fun getAllArticles(): List<Article> =
         service.getAllTheArticleFromTheDatabase().toList()
 
 

@@ -6,6 +6,7 @@ plugins {
 	kotlin("jvm") version "1.8.22"
 	kotlin("plugin.spring") version "1.8.22"
 	kotlin("plugin.jpa") version "1.8.22"
+	id ("org.sonarqube") version "4.2.1.3168"
 }
 
 group = "com.gradlekotlin"
@@ -39,6 +40,9 @@ dependencies {
 	testImplementation("org.testcontainers:junit-jupiter")
 	// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
 	testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
+	// https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin
+	implementation("org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184")
+
 }
 
 tasks.withType<KotlinCompile> {
